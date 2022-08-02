@@ -4,6 +4,7 @@ public class ConsoleExercises {
     public static void main(String[] args) {
         double pi = 3.14159;
         System.out.printf("The value of pi is approximately %.2f", pi);
+//        System.out.format("%.2f%n", pi);
 
         System.out.println();
 
@@ -16,6 +17,7 @@ public class ConsoleExercises {
         System.out.printf("You entered: --> %s", userInput);
 
 //        3 Words
+        scanner.nextLine();
         System.out.print("Enter 3 words: ");
         String inputOne = scanner.next();
         String inputTwo = scanner.next();
@@ -23,11 +25,13 @@ public class ConsoleExercises {
         System.out.printf("%s\n%s\n%s\n", inputOne, inputTwo, inputThree);
 
 //        Full Sentence
+        scanner.nextLine();
         System.out.print("Enter a full sentence: ");
         String fullSentence = scanner.nextLine();
         System.out.println("You sentence: --> " + fullSentence);
 
 //        Original
+        scanner.nextLine();
         System.out.print("Enter length of classroom: ");
         String length  = scanner.nextLine();
         int length2 = Integer.parseInt(length);
@@ -48,6 +52,8 @@ public class ConsoleExercises {
         float height5 = scanner.nextFloat();
 
         System.out.println("The area of the classroom is " + (length5 * width5) + " the perimeter is " + ((length5*2)+(width5*2)) + " and the volume is " + (length5*width5*height5) );
+
+
 
 
         scanner.close();
