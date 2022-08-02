@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
 
         //        5-15 Part 1
         int i = 5;
@@ -44,17 +43,38 @@ public class ControlFlowExercises {
         }
 
 //        FizzBuzz
-        for(long g = 1; g <= 100; g++) {
-            System.out.println(g);
-            if (g % 3 == 0) {
+        for(int g = 1; g < 100; g++) {
+            if (((g % 3) == 0) && ((g % 5) == 0)) {
+                System.out.println("FizzBuzz");
+            } else if (g % 3 == 0) {
                 System.out.println("Fizz");
             } else if (g % 5 == 0) {
                 System.out.println("Buzz");
-            } else if (g % 3 == 0 && g % 5 == 0) {
-                System.out.println("FizzBuzz");
+            } else {
+                System.out.println(g);
 
             }
         }
+
+//        Table of Powers
+        Scanner scanner = new Scanner(System.in);
+        String choice = "y";
+        do {
+            System.out.print("Enter an integer: ");
+            int input = scanner.nextInt();
+            System.out.println("Here is your Table of Powers!");
+            System.out.println("Number" + " " + "Squared" + " " + "Cubed");
+            System.out.println("------" + " " + "-------" + " " + "-----");
+
+            for (i = 1; i <= input; i++) {
+                System.out.println(i + "      | " + (i * i) + "       |" + "  " + (i * i * i));
+            }
+            System.out.print("\nContinue? (y/n): ");
+            choice = scanner.next();
+            System.out.println();
+        }
+        while (!choice.equalsIgnoreCase("n"));
+
 
     }
 }
