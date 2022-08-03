@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class StringExercise {
     public static void main(String[] args) {
         String a = "We don't need no education";
@@ -11,6 +13,19 @@ public class StringExercise {
         System.out.println(c);
         System.out.println(d);
         System.out.println(e);
+
+        System.out.println();
+//        Using an array list and input
+        ArrayList<String> quotes = new ArrayList<>();
+        quotes.add("We don't need no education");
+        quotes.add("We don't need no thought control");
+        quotes.add("Check \"this\" out!, \"s inside of \"s!");
+        quotes.add("In windows, the main drive is usually C:\"");
+        quotes.add("I can do backslashes , double backslashes, and triple backslashes");
+
+        for (String i : quotes) {
+            System.out.println(i);
+        }
 
 
     }

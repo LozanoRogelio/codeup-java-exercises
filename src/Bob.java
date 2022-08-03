@@ -7,13 +7,17 @@ public class Bob {
 
         System.out.println("Say something to Bob!");
         String userInput = scanner.nextLine();
-        if (userInput.toUpperCase().endsWith("?")) {
-            System.out.println("Sure");
-        } else if (userInput.toUpperCase().endsWith("!")) {
-            System.out.println("Whoa, chill out!");
-        } else if (userInput == "") {
-            System.out.println("Fine. Be that way!");
-        } else
-            System.out.println("Whatever");
-    }
+            if (userInput.toUpperCase().endsWith("?")) {
+                System.out.println("Sure");
+            } else if (userInput.toUpperCase().endsWith("!")) {
+                System.out.println("Whoa, chill out!");
+            } else if (userInput.equals("")) {
+                System.out.println("Fine. Be that way!");
+            } else {
+                System.out.println("Whatever");
+            }
+
+        }
+
+
 }
