@@ -76,5 +76,55 @@ public class ControlFlowExercises {
         while (!choice.equalsIgnoreCase("n"));
 
 
+        String option = "y";
+        do {
+            System.out.print("Enter your grade from 0-100: ");
+            int grade = scanner.nextInt();
+            char letterGrade = (0);
+            char plusMinus = (0);
+                if (grade >= 88 ) {
+                    letterGrade = 'A';
+                    if (grade <= 100 && grade >= 96) {
+                        plusMinus = '+';
+                    }
+                    else if (grade <= 94 && grade >= 88) {
+                        plusMinus = '-';
+                    }
+                } else if (grade >= 80) {
+                    letterGrade = 'B';
+                    if (grade <= 87 && grade >= 85) {
+                        plusMinus = '+';
+                    }
+                    else if (grade <= 84 && grade >= 80) {
+                        plusMinus = '-';
+                    }
+                } else if (grade >= 67) {
+                    letterGrade = 'C';
+                    if (grade <= 79 && grade >= 74) {
+                        plusMinus = '+';
+                    }
+                    else if (grade <= 73 && grade >= 67) {
+                        plusMinus = '-';
+                    }
+                } else if (grade >= 60) {
+                    letterGrade = 'D';
+                    if (grade <= 66 && grade >= 64) {
+                        plusMinus = '+';
+                    }
+                    else if (grade <= 63 && grade >= 60) {
+                        plusMinus = '-';
+                    }
+                } else {
+                    letterGrade = 'F';
+
+                }
+            System.out.println("You grade for this class is: " + letterGrade + plusMinus);
+            System.out.print("\nContinue? (y/n): ");
+            choice = scanner.next();
+            System.out.println();
+        }
+        while (!choice.equalsIgnoreCase("n"));
+
+
     }
 }
