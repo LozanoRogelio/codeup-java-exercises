@@ -1,3 +1,5 @@
+import java.util.Objects;
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -14,8 +16,12 @@ public class MethodsExercises {
 
         System.out.println();
         System.out.print("HEY!! Please enter a number between 1 and 100: ");
-//        long factorialInput = factorial( scanner);
         factorial(scanner);
+
+        System.out.println();
+        System.out.println("Enter the number of sides in each of your 2 dice...then roll em!");
+        rollDice(scanner.nextInt(), scanner.nextInt());
+
 
 
 
@@ -69,7 +75,6 @@ public class MethodsExercises {
         long total = 1;
         System.out.println(factorialInput);
         String yesOrNo = "y";
-        do {
             for (int i = 1; i <= factorialInput; i++) {
                 total *= i;
                 if (i == factorialInput) {
@@ -81,11 +86,31 @@ public class MethodsExercises {
             }
             System.out.print("\nContinue? (y/n): ");
             yesOrNo = scanner.next();
-            System.out.print("Enter a number between 1 and 100 that you wish to continue too: ");
-            factorial(scanner);
-        } while("y".equalsIgnoreCase(yesOrNo));
+            if(Objects.equals(yesOrNo, "y")) {
+                System.out.print("Enter a number between 1 and 100 that you wish to continue too: ");
+                factorial(scanner);
+            } else if (Objects.equals(yesOrNo, "n")) {
+                System.out.println("Thank you!");
+            }
 
     }
+    
+    
+    public static void rollDice(int firstDiceSides, int secondDiceSides) {
+        Random random = new Random();
+
+    int chance1 = random.nextInt(firstDiceSides);
+    int chance2 = random.nextInt(secondDiceSides);
+    int total = chance1 + chance2;
+
+
+    System.out.println("You rolled: " + chance1 + " for the first dice." + "\n" + " You rolled " + chance2 + " for the second dice." + "\n" + "Total of " + total + "!");
+
+    }
+
+
+
+
 
 
 
