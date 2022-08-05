@@ -8,14 +8,14 @@ public class MethodsExercises {
 
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Enter a number between 1 and 10: ");
-        int userInput = getInteger(1, 10, scanner);
+        System.out.print("Enter a number between 1 and 100: ");
+        int userInput = getInteger(1, 100, scanner);
         System.out.print(userInput);
 
         System.out.println();
-        System.out.print("HEY!! Please enter a number between 1 and 10: ");
-        long factorialInput = factorial( scanner);
-        System.out.print(factorialInput);
+        System.out.print("HEY!! Please enter a number between 1 and 100: ");
+//        long factorialInput = factorial( scanner);
+        factorial(scanner);
 
 
 
@@ -63,19 +63,28 @@ public class MethodsExercises {
 
     }
 
-    public static long factorial(Scanner scanner) {
+    public static void factorial(Scanner scanner) {
         String empty = "";
-        long factorialInput = getInteger(1,10,scanner);
+        long factorialInput = getInteger(1,100,scanner);
         long total = 1;
         System.out.println(factorialInput);
-        for (int i = 1; i < factorialInput; i++) {
-             total *= i;
-             if(i == factorialInput){
-                empty
-             }
-        }
+        String yesOrNo = "y";
+        do {
+            for (int i = 1; i <= factorialInput; i++) {
+                total *= i;
+                if (i == factorialInput) {
+                    empty += i + " ";
+                } else {
+                    empty += i + " x ";
+                }
+                System.out.println(i + "! = " + empty + " = " + total);
+            }
+            System.out.print("\nContinue? (y/n): ");
+            yesOrNo = scanner.next();
+            System.out.print("Enter a number between 1 and 100 that you wish to continue too: ");
+            factorial(scanner);
+        } while("y".equalsIgnoreCase(yesOrNo));
 
-        return factorialInput;
     }
 
 
