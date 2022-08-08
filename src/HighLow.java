@@ -7,6 +7,8 @@ public class HighLow {
 
         Random randomNum = new Random();
         int randomInt = randomNum.nextInt(100) + 1;
+        System.out.println(randomInt);
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println(HighLow(randomInt, scanner));
@@ -32,4 +34,8 @@ public class HighLow {
         }
 
     }
+
+//    public static int guessCounter (Scanner scanner) {
+//
+//    }
 }
