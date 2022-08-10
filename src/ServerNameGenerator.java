@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class ServerNameGenerator {
 
+
     public static void main(String[] args) {
         String[]  adjectives;
         adjectives = new String[]{"brave", "nice","fierce","wonderful","grumpy","defeated","evil","silly","funny","infamous"};
