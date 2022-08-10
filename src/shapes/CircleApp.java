@@ -15,9 +15,7 @@ public class CircleApp {
         Input createInput = new Input();
         System.out.println("Would you like to create a circle?");
         boolean userInput = createInput.yesNo();
-
         if(userInput){
-
             System.out.println("Enter radius of circle: ");
             Circle newCircle = new Circle(scanner.nextDouble());
             double area = newCircle.getArea();
@@ -25,7 +23,6 @@ public class CircleApp {
             System.out.println("Your circle has an area of "+ area + "!");
             System.out.println("Your circle has a circumference of "+ circumference + "!");
             createCircle(scanner);
-
         } else
             System.out.println("No worries! Thank you!!");
 

@@ -37,15 +37,9 @@ public class Input {
         }
     }
 
-//    public int getInt() {
-//        int number;
-//        if(number == number) {
-//            return Integer.parseInt(getString());
-//        } else {
-//            System.out.println("That is not a number ");
-//        }
-//        return getInt();
-//    }
+    public int getInt() {
+        return scanner.nextInt();
+    }
 
     public double getDouble(double min, double max) {
             System.out.println("Enter an integer between " + min + " and " + max);

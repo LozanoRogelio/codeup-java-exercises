@@ -2,15 +2,16 @@ public class Person {
 
     private String name;
 
+//    Constructor
     public Person(String name) {
         this.name = name;
     }
-
+//Getter
     public String getName(){
 //TODO: return the person's name
         return name;
     }
-
+//Setter
     public void setName(String name){
 //TODO: change the name field to the passed value
         this.name = name;
@@ -23,7 +24,7 @@ public class Person {
 
     public static void main(String[] args) {
         Person person = new Person("Roger");
-        System.out.println(person.sayHello());
+       person.sayHello();
 
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
