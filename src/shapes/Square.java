@@ -24,6 +24,7 @@ public class Square extends Rectangle {
 
     public void setSide(int side) {
         this.side = side;
+
     }
 
     @Override

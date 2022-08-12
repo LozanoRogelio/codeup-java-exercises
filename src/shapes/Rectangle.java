@@ -34,10 +34,13 @@ public class Rectangle {
         this.width = width;
     }
 
+//    AREA AND PERIMETER
     public int getArea() {
-        return (2*length)+(2*width);
+        return length * width;
+
     }
     public int getPerimeter() {
-        return length * width;
+        return (2*length)+(2*width);
+
     }
 }
