@@ -30,7 +30,7 @@ public class GradesApplication {
         student4.addGrade(90);
         student4.addGrade(95);
 
-        HashMap<String,Student> students = new HashMap<>();
+        HashMap<String, Student> students = new HashMap<>();
         students.put("Brianred", student1);
         students.put("Stewieblue", student2);
         students.put("Bartgreen", student3);
@@ -47,6 +47,8 @@ public class GradesApplication {
             System.out.printf(" |%s| ", username);
         }
 
+        String userConfirm;
+
         do {
             System.out.println("\nWhat student would you like to see more information on?");
             String userInput = sc.nextLine();
@@ -54,15 +56,15 @@ public class GradesApplication {
                 System.out.println("Sorry, no student found with the GitHub username of " + userInput + "!");
             } else {
                 Student student = (Student) students.get(userInput);
-                System.out.println("Student Name: "+ student.getStudentName());
+                System.out.println("Student Name: " + student.getStudentName());
                 System.out.println("GitHub Username: " + userInput);
-                System.out.println("Current Grade Average: "+ student.getGradeAverage());
+                System.out.println("Current Grade Average: " + student.getGradeAverage());
             }
             System.out.println("\n Would you like to see another student? Y/N?");
-            String userConfirm = sc.nextLine();
-            userConfirm.equalsIgnoreCase("y");
-        } while (students.)
-
+            userConfirm = sc.nextLine();
+//            userConfirm.equalsIgnoreCase("y");
+        } while (userConfirm.equalsIgnoreCase("y"));
+        System.out.println("Thank you!");
 
     }
 

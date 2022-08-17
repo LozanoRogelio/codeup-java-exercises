@@ -1,5 +1,6 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -37,7 +38,13 @@ public class Input {
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        System.out.println("Enter an integer: ");
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException |InputMismatchException e) {
+            System.out.println(e.getMessage()+ "\nNot an integer! Try Again.");
+        }
+        return getInt();
     }
 
     public double getDouble(double min, double max) {
@@ -56,9 +63,22 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Please enter a decimal number: ");
-        return scanner.nextDouble();
+        try {
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException|InputMismatchException e) {
+            System.out.println("Not a double integer! Try again.");
+        }
+        return getDouble();
+    }
+
+    public int getBinary(String binary) {
+        return Integer.valueOf(binary, 2);
+    }
+    public int getHex(String hex) {
+        return Integer.valueOf(hex, 16);
     }
 
 
-
+//    public void getHex(String s, int i) {
+//    }
 }
